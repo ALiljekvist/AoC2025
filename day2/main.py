@@ -10,6 +10,7 @@ def check_invalid(id) -> int:
 def part1(data):
     return sum(sum([check_invalid(id) for id in range(x[0], x[1]+1)]) for x in data)
 
+# TODO: Return next number that could possibly be invalid
 def check_invalid2(id) -> int:
     str_id = str(id)
     for win in range(1, len(str_id) // 2 + 1):
